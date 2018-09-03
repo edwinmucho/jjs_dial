@@ -22,7 +22,7 @@ from django.views.generic.base import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dialogflow/', include('dialogflow.urls')),
-    # path('plusfriend/', include('plusfriend.urls')),
+    path('plusfriend/', include('kakao.urls')),
     path('', RedirectView.as_view(pattern_name='dialogflow:index'), name='root'),
 ]
 
